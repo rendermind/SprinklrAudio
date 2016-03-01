@@ -20,7 +20,19 @@ window.setInterval(function() {
 	SprinklrAudio.lastCount = SprinklrAudio.count;
 
 	var date = new Date($.now());
+<<<<<<< HEAD
 	var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+=======
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var seconds = date.getSeconds();
+
+	if (date.getHours() < 10) { hours = "0" + date.getHours(); }
+	if (date.getMinutes() < 10) { minutes = "0" + date.getMinutes(); }
+	if (date.getSeconds() < 10) { seconds = "0" + date.getSeconds(); }
+	
+	var time = hours + ":" + minutes + ":" + seconds;
+>>>>>>> refs/remotes/origin/master
 	$(document).prop("title", "SprinklrAudio - " + time);
 
 }, 1000);
