@@ -19,6 +19,10 @@ window.setInterval(function() {
 
 	SprinklrAudio.lastCount = SprinklrAudio.count;
 
+	var date = new Date($.now());
+	var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+	$(document).prop("title", "SprinklrAudio - " + time);
+
 }, 1000);
 
 SprinklrAudio.alert.play();
